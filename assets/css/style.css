@@ -1,63 +1,46 @@
-
 /* ----- BASE ----- */
-
 
 /* ----- SMOOTH SCROLL ----- */
 
+/* ----- DARK MODE ----- */
 
 /* ----- CHANGE THE SCROLL BAR DESIGN ----- */
-
 
 /* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
 
-
 /* ----- GLOBAL ICONS DESIGN ----- */
 
 /* ------- BASE -------- */
 
-
 /* ----- NAVIGATION BAR ----- */
-
 
 /* ----- WRAPPER DESIGN ----- */
 
-
 /* ----- FEATURED BOX ----- */
 
-
 /* ----- FEATURED TEXT BOX ----- */
-
-
 
 /* ----- FEATURED IMAGE BOX ----- */
 
 /* ----- MAIN BOX ----- */
 
-
 /* -- ## --- RESUABLE CSS -- ## -- */
 
 /* ----- ABOUT INFO ----- */
 
-
 /* ----- ABOUT / SKILLS BOX ----- */
-
 
 /* ----- PROJECTS BOX ----- */
 
 /* ----- CONTACT BOX ----- */
 
-
 /* ----- CONTACT FORM ----- */
-
 
 /* ----- FOOTER BOX ----- */
 
-
-
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
-
 
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 
@@ -65,28 +48,23 @@
 
 
 /* ----- POPPINS FONT Link ----- */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* ----- VARIABLES ----- */
-:root{
+:root {
     --body-color: rgb(250, 250, 250);
     --color-white: rgb(255, 255, 255);
-
     --text-color-second: rgb(68, 68, 68);
     --text-color-third: rgb(30, 159, 171);
-
     --first-color: rgb(110, 87, 224);
     --first-color-hover: rgb(40, 91, 212);
-
     --second-color: rgb(0, 201, 255);
     --third-color: rgb(192, 166, 49);
     --first-shadow-color: rgba(0, 0, 0, 0.1);
-
 }
 
 /* ----- BASE ----- */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -94,31 +72,63 @@
 }
 
 /* ----- SMOOTH SCROLL ----- */
-html{
+html {
     scroll-behavior: smooth;
 }
 
+/* ----- DARK MODE ----- */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+nav#header.dark-mode {
+    background-color: #1e1e1e;
+}
+
+.btn.dark-mode {
+    background-color: #333;
+    color: #ffffff;
+}
+
+input.dark-mode,
+textarea.dark-mode {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+.top-footer.dark-mode {
+    background-color: #1e1e1e;
+}
+
+.footer-menu a.dark-mode {
+    color: #ffffff;
+}
+
 /* ----- CHANGE THE SCROLL BAR DESIGN ----- */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
     border-radius: 25px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 30px;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background: #bbb;
 }
-
 
 /* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
-.btn{
+.btn {
     font-weight: 500;
     padding: 12px 20px;
     background: #efefef;
@@ -127,29 +137,31 @@ html{
     cursor: pointer;
     transition: .4s;
 }
-.btn>i{
+
+.btn > i {
     margin-left: 10px;
 }
-.btn:hover{
+
+.btn:hover {
     background: var(--second-color);
     color: var(--color-white);
 }
 
 /* ----- GLOBAL ICONS DESIGN ----- */
-i{
+i {
     font-size: 16px;
 }
 
 /* ------- BASE -------- */
-body{
+body {
     background: var(--body-color);
 }
-.container{
+
+.container {
     width: 100%;
     position: relative;
 }
 
-/* ----- NAVIGATION BAR ----- */
 /* ----- NAVIGATION BAR ----- */
 nav {
     position: fixed;
@@ -165,7 +177,7 @@ nav {
 }
 
 .nav-logo {
-   position: relative;
+    position: relative;
 }
 
 .nav-name {
@@ -182,7 +194,8 @@ nav {
     color: var(--text-color-second);
 }
 
-.nav-menu, .nav_menu_list {
+.nav-menu,
+.nav_menu_list {
     display: flex;
 }
 
@@ -192,7 +205,7 @@ nav {
 }
 
 .nav-link {
-    text-decoration: none; /* Removes underline */
+    text-decoration: none;
     color: var(--text-color-second);
     font-weight: 500;
     padding-inline: 15px;
@@ -211,7 +224,7 @@ nav {
 .active-link {
     position: relative;
     color: var(--first-color);
-    transition: .3;
+    transition: .3s;
 }
 
 .active-link::after {
@@ -225,21 +238,22 @@ nav {
     background: var(--first-color);
     border-radius: 50%;
 }
+
 /* ----- WRAPPER DESIGN ----- */
-.wrapper{
+.wrapper {
     padding-inline: 10vw;
 }
 
 /* ----- FEATURED BOX ----- */
-.featured-box{
+.featured-box {
     position: relative;
     display: flex;
-    height: 100vh;
     min-height: 700px;
+    flex-wrap: wrap;
 }
 
 /* ----- FEATURED TEXT BOX ----- */
-.featured-text{
+.featured-text {
     position: relative;
     display: flex;
     justify-content: center;
@@ -249,45 +263,55 @@ nav {
     width: 50%;
     padding-left: 20px;
 }
-.featured-text-card span{
+
+.featured-text-card span {
     background: var(--third-color);
     color: var(--color-white);
     padding: 3px 8px;
-    font-size: 12px;
+    font-size: 20px;
     border-radius: 5px;
 }
-.featured-name{
+
+.featured-name {
     font-size: 50px;
     font-weight: 600;
     color: var(--text-color-second);
     margin-block: 20px;
 }
-.typedText{
+
+.typedText {
     text-transform: capitalize;
     color: var(--text-color-third);
 }
-.featured-text-info{
+
+.featured-text-info {
     font-size: 15px;
     margin-bottom: 30px;
     color: var(--text-color-second);
 }
-.featured-text-btn{
+
+.featured-text-btn {
     display: flex;
     gap: 20px;
+    margin-top: 15px;
 }
-.featured-text-btn>.blue-btn{
+
+.featured-text-btn > .blue-btn {
     background: var(--first-color);
     color: var(--color-white);
 }
-.featured-text-btn>.blue-btn:hover{
+
+.featured-text-btn > .blue-btn:hover {
     background: var(--first-color-hover);
 }
-.social_icons{
+
+.social_icons {
     display: flex;
     margin-top: 5em;
     gap: 30px;
 }
-.icon{
+
+.icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,19 +321,21 @@ nav {
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
-.icon:hover{
+
+.icon:hover {
     color: var(--first-color);
 }
 
 /* ----- FEATURED IMAGE BOX ----- */
-.featured-image{
+.featured-image {
     display: flex;
     justify-content: right;
     align-content: center;
     min-height: 80vh;
     width: 50%;
 }
-.image{
+
+.image {
     margin: auto 0;
     width: 380px;
     height: 380px;
@@ -317,67 +343,77 @@ nav {
     overflow: hidden;
     animation: imgFloat 7s ease-in-out infinite;
 }
-.image img{
+
+.image img {
     width: 380px;
     height: 380px;
     object-fit: cover;
 }
+
 @keyframes imgFloat {
-    50%{
+    50% {
         transform: translateY(10px);
         border-radius: 45% 55% 45% 55%;
     }
 }
-.scroll-btn{
-   position: absolute;
-   bottom: 0;
-   left: 50%;
-   translate: -50%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 150px;
-   height: 50px;
-   gap: 5px;
-   text-decoration: none;
-   color: var(--text-color-second);
-   background: var(--color-white);
-   border-radius: 30px;
-   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+
+.scroll-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    gap: 5px;
+    margin-bottom: 90px;
+    text-decoration: none;
+    color: var(--text-color-second);
+    background: var(--color-white);
+    border-radius: 30px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
-.scroll-btn i{
+
+.scroll-btn i {
     font-size: 20px;
 }
 
 /* ----- MAIN BOX ----- */
-.section{
-    padding-block: 5em;
+.section {
+    padding-block: 2em;
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap: 50px;
 }
-.col{
+
+.col {
     display: flex;
     width: 50%;
 }
 
 /* -- ## --- RESUABLE CSS -- ## -- */
-.top-header{
+.top-header {
     text-align: center;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
-.top-header h1{
+
+.top-header h1 {
     font-weight: 600;
     color: var(--text-color-second);
-    margin-bottom: 10px;
+    margin-bottom: 150px;
 }
-.top-header span{
+
+.top-header span {
     color: #999;
 }
-h3{
+
+h3 {
     font-size: 20px;
     font-weight: 600;
     color: var(--text-color-second);
@@ -385,7 +421,7 @@ h3{
 }
 
 /* ----- ABOUT INFO ----- */
-.about-info{
+.about-info {
     position: relative;
     display: flex;
     align-items: center;
@@ -397,12 +433,14 @@ h3{
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     border-radius: 20px;
 }
-.about-info p{
+
+.about-info p {
     text-align: center;
     font-size: 15px;
     color: #777;
 }
-.about-btn button{
+
+.about-btn button {
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -410,39 +448,53 @@ h3{
     color: var(--color-white);
     border-radius: 30px;
 }
-.about-btn button:hover{
+
+.about-btn button:hover {
     background: var(--first-color-hover);
 }
 
 /* ----- ABOUT / SKILLS BOX ----- */
-.skills-box{
-    margin: 10px;
-}
-.skills-header{
-    margin-bottom: 30px;
-}
-.skills-list{
+.skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 20px;
 }
-.skills-list span{
-    font-size: 14px;
-    background: var(--first-color);
-    color: var(--color-white);
-    padding: 2px 10px;
-    border-radius: 5px;
+
+.skill-card {
+    flex: 1 1 calc(33.333% - 20px);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    color: grey;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #444;
+    margin-top: 10px;
+}
+
+.skill-list li {
+    margin-bottom: 6px;
 }
 
 /* ----- PROJECTS BOX ----- */
-.project-container{
+.project-container {
     display: flex;
     width: 100%;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
 }
-.project-box{
+
+.project-box {
     position: relative;
     display: flex;
     justify-content: center;
@@ -455,16 +507,19 @@ h3{
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
 }
-.project-box>i{
+
+.project-box > i {
     font-size: 50px;
     color: #00B5E7;
     margin-bottom: 25px;
 }
-.project-box label{
+
+.project-box label {
     font-size: 15px;
     color: #777;
 }
-.project-box::after, .contact-info::after{
+
+.project-box::after {
     content: "";
     position: absolute;
     bottom: -100%;
@@ -474,19 +529,20 @@ h3{
     transition: .4s;
     z-index: 1;
 }
-.project-box:hover.project-box::after,
-.contact-info:hover.contact-info::after{
+
+.project-box:hover::after {
     bottom: 0;
 }
-.project-box:hover.project-box i,
-.project-box:hover.project-box>h3,
-.project-box:hover.project-box>label{
+
+.project-box:hover i,
+.project-box:hover h3,
+.project-box:hover label {
     color: var(--color-white);
     z-index: 2;
 }
 
 /* ----- CONTACT BOX ----- */
-.contact-info{
+.contact-info {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -500,43 +556,39 @@ h3{
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
 }
-.contact-info>h2{
+
+.contact-info > h2 {
     color: var(--color-white);
     margin-bottom: 20px;
 }
-.contact-info>p{
+
+.contact-info > p {
     display: flex;
     align-items: center;
     gap: 10px;
     color: var(--color-white);
     margin-block: 5px;
 }
-.contact-info p>i{
+
+.contact-info p > i {
     font-size: 18px;
-}
-.contact-info::after{
-    background: var(--color-white);
-}
-.contact-info:hover.contact-info h2,
-.contact-info:hover.contact-info p,
-.contact-info:hover.contact-info i{
-    color: #777;
-    z-index: 2;
 }
 
 /* ----- CONTACT FORM ----- */
-.form-control{
+.form-control {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 100%;
 }
-.form-inputs{
+
+.form-inputs {
     display: flex;
     gap: 10px;
     width: 100%;
 }
-.input-field{
+
+.input-field {
     width: 50%;
     height: 55px;
     background: transparent;
@@ -545,7 +597,8 @@ h3{
     padding-inline: 20px;
     outline: none;
 }
-textarea{
+
+textarea {
     width: 100%;
     height: 250px;
     background: transparent;
@@ -555,23 +608,26 @@ textarea{
     outline: none;
     resize: none;
 }
-.form-button>.btn{
+
+.form-button > .btn {
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--second-color);
     color: var(--color-white);
 }
-.form-button>.btn:hover{
+
+.form-button > .btn:hover {
     background: #00B5E7;
 }
-.form-button i{
+
+.form-button i {
     font-size: 18px;
-    rotate: -45deg;
+    transform: rotate(-45deg);
 }
 
 /* ----- FOOTER BOX ----- */
-footer{
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -580,52 +636,61 @@ footer{
     background: #F8F8F8;
     padding-block: 40px 60px;
 }
-.top-footer p{
+
+.top-footer p {
     font-size: 25px;
     font-weight: 600;
+    color: gray;
 }
-.middle-footer .footer-menu{
+
+.middle-footer .footer-menu {
     display: flex;
 }
-.footer_menu_list{
+
+.footer_menu_list {
     list-style: none;
 }
-.footer_menu_list a{
+
+.footer_menu_list a {
     text-decoration: none;
     color: var(--text-color-second);
     font-weight: 500;
     margin-inline: 20px;
 }
-.footer-social-icons{
+
+.footer-social-icons {
     display: flex;
     gap: 30px;   
 }
-.bottom-footer{
+
+.bottom-footer {
     font-size: 14px;
     margin-top: 10px;
 }
 
-
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
-@media only screen and (max-width: 1024px){
-    .featured-text{
+@media only screen and (max-width: 1024px) {
+    .featured-text {
         padding: 0;
     }
-    .image, .image img{
+
+    .image,
+    .image img {
         width: 320px;
         height: 320px;
     }
 }
-
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 900px) {
-    .nav-button{
+    .nav-button {
         display: none;
     }
-    .nav-menu.responsive{
+
+    .nav-menu.responsive {
         left: 0;
     }
-    .nav-menu{
+
+    .nav-menu {
         position: fixed;
         top: 80px;
         left: -100%;
@@ -639,76 +704,97 @@ footer{
         height: 90vh;
         transition: .3s;
     }
-    .nav_menu_list{
+
+    .nav_menu_list {
         flex-direction: column;
+        gap: 10px; /* Added gap for spacing */
     }
-    .nav-menu-btn{
+
+    .nav-menu-btn {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .featured-box{
+
+    .featured-box {
+        height: auto;
+        min-height: auto;
         flex-direction: column;
-        justify-content: center;
-        height: 100vh;
+        padding-top: 50px; /* Reduced padding */
     }
-    .featured-text{
+
+    .featured-text {
         width: 100%;
         order: 2;
         justify-content: center;
         align-content: flex-start;
         min-height: 60vh;
+        margin-bottom: 20px; /* Added margin for spacing */
     }
-    .social_icons{
-        margin-top: 2em;
+
+    .social_icons {
+        margin-top: 1em; /* Reduced margin */
     }
-    .featured-image{
+
+    .featured-image {
         order: 1;
         justify-content: center;
         min-height: 150px;
         width: 100%;
-        margin-top: 65px;
+        margin-top: 40px; /* Reduced margin */
     }
-    .image, .image img{
+
+    .image,
+    .image img {
         width: 150px;
         height: 150px;
     }
-    .row{
+
+    .row {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 50px;
+        gap: 15px; /* Reduced gap */
     }
-    .col{
+
+    .col {
         display: flex;
         justify-content: center;
         width: 100%;
     }
-    .about-info, .contact-info{
+
+    .about-info,
+    .contact-info {
         width: 100%;
     }
-    .project-container{
+
+    .project-container {
         justify-content: center;
-    }
-    .project-box{
-        width: 80%;
+        gap: 15px; /* Added gap for spacing */
     }
 
+    .project-box {
+        width: 80%;
+    }
 }
 
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
+@media only screen and (max-width: 540px) {
+    .featured-name {
+        font-size: 30px; /* Reduced font size */
+    }
 
-@media only screen and (max-width: 540px){
-    .featured-name{
-        font-size: 40px;
-    }
-    .project-box{
+    .project-box {
         width: 100%;
+        margin-bottom: 15px; /* Added bottom margin */
     }
-    .form-inputs{
+
+    .form-inputs {
         flex-direction: column;
+        gap: 10px; /* Added gap for spacing */
     }
-    .input-field{
+
+    .input-field {
         width: 100%;
     }
 }
