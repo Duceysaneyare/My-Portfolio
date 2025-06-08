@@ -152,3 +152,50 @@ sections.forEach(current =>{
 }
 
 window.addEventListener('scroll', scrollActive)
+
+
+/* ----- CONTACT FORM FUNCTION ----- */
+
+        document.getElementById('send-button').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Gather form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+    
+            // Basic validation
+            if (name && email && message) {
+                // Here you can send the data to your server or an email service
+                console.log('Form Submitted:', { name, email, message });
+                alert('Your message has been sent successfully!');
+    
+                // Clear the form
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+    
+        // Existing dark mode toggle code
+        const toggleButton = document.getElementById('toggle-dark-mode');
+        const modeIcon = document.getElementById('mode-icon');
+    
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const elements = document.querySelectorAll('.btn, input, textarea');
+            elements.forEach(el => el.classList.toggle('dark-mode'));
+            document.getElementById('header').classList.toggle('dark-mode');
+    
+            // Toggle icon
+            if (document.body.classList.contains('dark-mode')) {
+                modeIcon.classList.remove('uil-moon');
+                modeIcon.classList.add('uil-sun');
+            } else {
+                modeIcon.classList.remove('uil-sun');
+                modeIcon.classList.add('uil-moon');
+            }
+        });
+  
