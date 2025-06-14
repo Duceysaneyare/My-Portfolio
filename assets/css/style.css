@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* ----- VARIABLES ----- */
-
 :root{
     --body-color: rgb(250, 250, 250);
     --color-white: rgb(255, 255, 255);
@@ -16,7 +15,6 @@
     --second-color: rgb(0, 201, 255);
     --third-color: rgb(192, 166, 49);
     --first-shadow-color: rgba(0, 0, 0, 0.1);
-
 }
 
 /* ----- BASE ----- */
@@ -62,7 +60,6 @@ html{
     background: #bbb;
 }
 
-
 /* ---##-- REUSABLE CSS --##--- */
 
 /* ----- GLOBAL BUTTON DESIGN ----- */
@@ -82,12 +79,10 @@ html{
     background: var(--second-color);
     color: var(--color-white);
 }
-
 /* ----- GLOBAL ICONS DESIGN ----- */
 i{
     font-size: 16px;
 }
-
 /* ------- BASE -------- */
 body{
     background: var(--body-color);
@@ -96,7 +91,6 @@ body{
     width: 100%;
     position: relative;
 }
-
 /* ----- NAVIGATION BAR ----- */
 nav{
     position: fixed;
@@ -162,13 +156,10 @@ nav{
     background: var(--first-color);
     border-radius: 50%;
 }
-
-
 /* ----- WRAPPER DESIGN ----- */
 .wrapper{
     padding-inline: 10vw;
 }
-
 /* ----- FEATURED BOX ----- */
 .featured-box{
     position: relative;
@@ -176,7 +167,6 @@ nav{
     height: 100vh;
     min-height: 700px;
 }
-
 /* ----- FEATURED TEXT BOX ----- */
 .featured-text{
     position: relative;
@@ -303,8 +293,6 @@ nav{
     display: flex;
     width: 50%;
 }
-
-/* -- ## --- RESUABLE CSS -- ## -- */
 .top-header{
     text-align: center;
     margin-bottom: 5em;
@@ -348,16 +336,14 @@ h3{
     bottom: 20px;
     background: var(--first-color);
     color: var(--color-white);
-    border-radius: 30px;
-    
+    border-radius: 30px;   
 }
 .about-btn{
     margin-top: 25px;
 }
 .about-btn button:hover{
-    /* background: var(--first-color-hover); */
+    
 }
-
 /* ----- ABOUT / SKILLS BOX ----- */
 .skills-box{
     margin: 10px;
@@ -428,7 +414,6 @@ h3{
     color: var(--color-white);
     z-index: 2;
 }
-
 /* ----- CONTACT BOX ----- */
 .contact-info{
     position: relative;
@@ -467,7 +452,6 @@ h3{
     color: #777;
     z-index: 2;
 }
-
 /* ----- CONTACT FORM ----- */
 .form-control{
     display: flex;
@@ -550,8 +534,6 @@ footer{
     margin-top: 10px;
    
 }
-
-
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px){
     .featured-text{
@@ -562,7 +544,6 @@ footer{
         height: 320px;
     }
 }
-
 /* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 900px) {
     .nav-button{
@@ -639,9 +620,7 @@ footer{
     .project-box{
         width: 80%;
     }
-
 }
-
 /* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
 
 @media only screen and (max-width: 540px){
